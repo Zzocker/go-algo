@@ -1,6 +1,7 @@
 package singly
 
 import (
+	"container/list"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -219,5 +220,19 @@ func TestReverse(t *testing.T) {
 	for i := 0; i < size; i++ {
 		is.Equal(i, ptr.Value)
 		ptr = ptr.Next()
+	}
+}
+
+func BenchmarkSingly(b *testing.B) {
+	l := New()
+	for i := 0; i < b.N; i++ {
+		l.PushFront(NewNode(i))
+	}
+}
+
+func BenchmarkGo(b *testing.B) {
+	l := list.New()
+	for i := 0; i < b.N; i++ {
+		l.PushFront(i)
 	}
 }
