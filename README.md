@@ -5,6 +5,8 @@ Implantation of various algorithms and data-structure in golang for educational 
 ## Index
 - Data Structure
    - [Dynamic Array](dataStructure/arrays/arrays.md)
+   - Linked List
+      - [Singly Linked List](dataStructure/linkedlist/singly/singly.md)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
