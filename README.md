@@ -11,6 +11,7 @@ Implantation of various algorithms and data-structure in golang for educational 
       - [Un-Bound Stack](dataStructure/stack/unbound.go)
    - [Queue](dataStructure/queue/queue.md)
       - [Un-Bound Queue](dataStructure/queue/unbound.go)
+      - [Bound Queue](dataStructure/queue/bound.go)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
