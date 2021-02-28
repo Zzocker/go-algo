@@ -30,6 +30,7 @@ type entry struct {
 const (
 	radix       int     = '~' - ' ' + 1
 	goldenRatio float64 = 1.618033988749895
+	probNumber          = 2147483647
 )
 
 func encode(key interface{}) int {
@@ -44,4 +45,8 @@ func encode(key interface{}) int {
 func hash(encoded int, cap int) int {
 	ge := float64(encoded) * goldenRatio
 	return int((ge - math.Floor(ge)) * float64(cap))
+}
+
+func hash2(encoded int, cap int) int {
+	return probNumber - (encoded % probNumber)
 }
