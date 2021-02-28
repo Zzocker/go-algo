@@ -12,6 +12,8 @@ Implantation of various algorithms and data-structure in golang for educational 
    - [Queue](dataStructure/queue/queue.md)
       - [Un-Bound Queue](dataStructure/queue/unbound.go)
       - [Bound Queue](dataStructure/queue/bound.go)
+   - [Hash Table](dataStructure/hashtable/hashtable.md)
+      - [Chaining](dataStructure/hashtable/chaining.go)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
