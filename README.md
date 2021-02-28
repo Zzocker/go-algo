@@ -7,6 +7,8 @@ Implantation of various algorithms and data-structure in golang for educational 
    - [Dynamic Array](dataStructure/arrays/arrays.md)
    - Linked List
       - [Singly Linked List](dataStructure/linkedlist/singly/singly.md)
+   - [Stack](dataStructure/stack/stack.md)
+      - [Un-Bound Stack](dataStructure/stack/unbound.go)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
