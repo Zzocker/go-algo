@@ -11,9 +11,9 @@ func TestBoundLen(t *testing.T) {
 	q := NewBound(4)
 
 	is.Zero(q.Len())
-	q.Push(1)
+	is.NoError(q.Push(1))
 	is.Equal(1, q.Len())
-	q.Push(1)
+	is.NoError(q.Push(1))
 	is.Equal(2, q.Len())
 
 	q.Pop()
@@ -25,7 +25,7 @@ func TestBoundEmpty(t *testing.T) {
 	q := NewBound(4)
 	is.True(q.Empty())
 
-	q.Push(1)
+	is.NoError(q.Push(1))
 	is.False(q.Empty())
 
 	q.Pop()
@@ -38,9 +38,9 @@ func TestBoundFull(t *testing.T) {
 
 	is.False(q.Full())
 
-	q.Push(1)
-	q.Push(2)
-	q.Push(3)
+	is.NoError(q.Push(1))
+	is.NoError(q.Push(2))
+	is.NoError(q.Push(3))
 	is.True(q.Full())
 
 	q.Pop()
@@ -76,12 +76,12 @@ func TestBoundPop(t *testing.T) {
 
 	is.Nil(q.Pop())
 
-	q.Push(1)
+	is.NoError(q.Push(1))
 	is.Equal(1, q.Pop())
 	is.Zero(q.Len())
 
-	q.Push(1)
-	q.Push(2)
+	is.NoError(q.Push(1))
+	is.NoError(q.Push(2))
 
 	is.Equal(1, q.Pop())
 	is.Equal(1, q.Len())
@@ -95,10 +95,10 @@ func TestBoundTop(t *testing.T) {
 
 	is.Nil(q.Top())
 
-	q.Push(1)
+	is.NoError(q.Push(1))
 	is.Equal(1, q.Top())
 
-	q.Push(2)
+	is.NoError(q.Push(2))
 	q.Pop()
 	is.Equal(2, q.Top())
 }
