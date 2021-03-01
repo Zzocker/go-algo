@@ -15,6 +15,8 @@ Implantation of various algorithms and data-structure in golang for educational 
    - [Hash Table](dataStructure/hashtable/hashtable.md)
       - [Chaining](dataStructure/hashtable/chaining.go)
       - [Open Addressing](dataStructure/hashtable/openaddress.go)
+- Search
+   - [Binary Search](search/binary/binary.md)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
