@@ -17,6 +17,8 @@ Implantation of various algorithms and data-structure in golang for educational 
       - [Open Addressing](dataStructure/hashtable/openaddress.go)
 - Search
    - [Binary Search](search/binary/binary.md)
+- Tree
+   - [Basic BFS And DFS](dataStructure/tree/bsfDfs.go)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
