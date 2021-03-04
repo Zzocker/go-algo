@@ -19,6 +19,7 @@ Implantation of various algorithms and data-structure in golang for educational 
    - [Binary Search](search/binary/binary.md)
 - Tree
    - [Basic BFS And DFS](dataStructure/tree/firstSearch/bsfDfs.go)
+   - [Binary Tree](dataStructure/tree/binarytree/internal.go)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
