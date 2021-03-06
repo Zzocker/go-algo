@@ -18,6 +18,8 @@ Implantation of various algorithms and data-structure in golang for educational 
     - Tree
        - [Basic BFS And DFS](dataStructure/tree/firstSearch/bsfDfs.go)
        - [Binary Tree](dataStructure/tree/binarytree/internal.go)
+       - AVL
+         - [Insert Item](dataStructure/tree/avl/insert.go)
 - Algorithm
    - Search
       - [Binary Search](search/binary/binary.md)
