@@ -20,6 +20,7 @@ Implantation of various algorithms and data-structure in golang for educational 
        - [Binary Tree](dataStructure/tree/binarytree/internal.go)
        - AVL
          - [Insert Item](dataStructure/tree/avl/insert.go)
+         - [Delete Item](dataStructure/tree/avl/delete.go)
 - Algorithm
    - Search
       - [Binary Search](search/binary/binary.md)
