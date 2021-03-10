@@ -15,12 +15,13 @@ Implantation of various algorithms and data-structure in golang for educational 
    - [Hash Table](dataStructure/hashtable/hashtable.md)
       - [Chaining](dataStructure/hashtable/chaining.go)
       - [Open Addressing](dataStructure/hashtable/openaddress.go)
-    - Tree
-       - [Basic BFS And DFS](dataStructure/tree/firstSearch/bsfDfs.go)
-       - [Binary Tree](dataStructure/tree/binarytree/internal.go)
-       - AVL
-         - [Insert Item](dataStructure/tree/avl/insert.go)
-         - [Delete Item](dataStructure/tree/avl/delete.go)
+   - Tree
+      - [Basic BFS And DFS](dataStructure/tree/firstSearch/bsfDfs.go)
+      - [Binary Tree](dataStructure/tree/binarytree/internal.go)
+      - AVL
+      - [Insert Item](dataStructure/tree/avl/insert.go)
+      - [Delete Item](dataStructure/tree/avl/delete.go)
+   - [Heap](dataStructure/heap/heap.go)
 - Algorithm
    - Search
       - [Binary Search](search/binary/binary.md)
