@@ -25,6 +25,8 @@ Implantation of various algorithms and data-structure in golang for educational 
 - Algorithm
    - Search
       - [Binary Search](search/binary/binary.md)
+   - Sorting
+      - [Heap Sort](sorting/heapSort.go)
 - Cryptography
    - Symmetric 
       - [DES](cryptography/des/fFunction.go)
