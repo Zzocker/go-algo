@@ -10,7 +10,7 @@ func HeapSort(a []int) {
 }
 
 func heapify(a []int) {
-	for i := len(a) - 1; i >= 0; i-- {
+	for i := (len(a) / 2) - 1; i >= 0; i-- { // leafs are good
 		moveDown(a, i, len(a))
 	}
 }
