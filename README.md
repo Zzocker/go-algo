@@ -33,6 +33,8 @@ Implantation of various algorithms and data-structure in golang for educational 
 - Cryptography
    - Symmetric 
       - [DES](cryptography/des/fFunction.go)
+   - Modern
+      - [Notes](cryptography/NOTES.md)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
