@@ -28,6 +28,8 @@ Implantation of various algorithms and data-structure in golang for educational 
    - Sorting
       - [Heap Sort](sorting/heapSort.go)
       - [Merge Sort](sorting/mergeSort.go)
+      - [Quick Sort](sorting/quickSort.go)
+      - [3-Way Quick Sort](sorting/3wayQuickSort.go)
 - Cryptography
    - Symmetric 
       - [DES](cryptography/des/fFunction.go)
