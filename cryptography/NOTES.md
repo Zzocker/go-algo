@@ -214,3 +214,4 @@ Pseudo code
             return false
     return true
 ```
+[Implementation](../math/primetest/primeTest.go)
