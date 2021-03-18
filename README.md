@@ -35,6 +35,11 @@ Implantation of various algorithms and data-structure in golang for educational 
       - [DES](cryptography/des/fFunction.go)
    - Modern
       - [Notes](cryptography/NOTES.md)
+
+## Resources
+- Cryptography
+   - [Introduction to Cryptography by Christof Paar](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg/videos)
+   - [Understanding Cryptography: A Textbook for Students and Practitioners](https://www.amazon.in/Understanding-Cryptography-Textbook-Students-Practitioners-ebook/dp/B014P9I39Q)
 ## Note
 
 All Benchmarks are performed on Machine with fallowing specs
