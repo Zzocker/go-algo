@@ -21,11 +21,12 @@ func EEA(r0, r1 int64) (int64, int64) {
 	// initial values for s and t
 	var s0, t0, s1, t1 int64 = 1, 0, 0, 1
 	for r1 != 0 {
-		q := r0 / r1
+		ri := r0 % r1
+		q := (r0 - ri) / r1
 		s0, s1 = s1, s0-(q*s1)
 		t0, t1 = t1, t0-(q*t1)
 
-		r0, r1 = r1, r0%r1
+		r0, r1 = r1, ri
 	}
 	return s0, t0
 }

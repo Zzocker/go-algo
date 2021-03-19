@@ -155,6 +155,8 @@ Now, kPub = (e,n) and kPrv = d
 ```
     x = y^d mod n
 ```
+[Implementation](./rsa/rsa.go)
+
 ### Math
 - [Fast Modular Exponential Computation](#Fast-Modular-Exponential-Computation)
 - [Prime Number Test Using Fermat’s Little Theorem](#Prime-Number-Test-Using-Fermat’s-Little-Theorem)
