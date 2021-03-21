@@ -5,6 +5,7 @@
 - [Essential Number Theory for Public-Key Cryptography](#Essential-Number-Theory-for-Public-Key-Cryptography)
 - [Math](#Math)
 - [Introduction To Public Key Cryptography](#Introduction-To-Public-Key-Cryptography)
+- [Diffie–Hellman key exchange](#Diffie–Hellman-key-exchange)
 
 ### Essential Number Theory for Public-Key Cryptography
 - [Euclidean Algorithm](#Euclidean-Algorithm)
@@ -161,6 +162,7 @@ Now, kPub = (e,n) and kPrv = d
 - [Fast Modular Exponential Computation](#Fast-Modular-Exponential-Computation)
 - [Prime Number Test Using Fermat’s Little Theorem](#Prime-Number-Test-Using-Fermat’s-Little-Theorem)
 - [Prime Number Test Using Miller–Rabin Theorem](#Prime-Number-Test-Using-Miller–Rabin-Theorem)
+- [Groups](#Groups)
 
 ### Fast Modular Exponential Computation
 Computing ``y = x ^(e) mod n`` for large value of e (say 2^(2024))
@@ -217,3 +219,73 @@ Pseudo code
     return true
 ```
 [Implementation](../math/primetest/primeTest.go)
+
+### Groups
+
+very engineering definition, a set **G** of element and operation **o** defined on those elements.
+```
+    Property of a Group
+    1. Closeness : 
+        for element a , b ∈ G , it holds a o b = c ∈ G
+    2. Associative :
+        a o (b o c) = (a o b) o c ; a,b,c ∈ G
+    3. There exists a identity element 1 ∈ G; such that
+        a o 1 = a
+    4. There exists inverses of element
+        a^(-1) ∈ G
+    5. Commutative : (if satisfied then group is called abelian group)
+        a o b = b o c
+```
+```
+    Th 1
+    The set Zn(star) which consists of all integers i = 0, 1, . . . , n − 1 for which
+    gcd(i, n) = 1 forms an abelian group under multiplication modulo n. The identity element is e = 1.
+```
+```
+    Finite Group
+    A group (G, ◦) is finite if it has a finite number of elements. We denote the cardinality or order of the group G by |G|.
+```
+```
+    Order of an element
+    The order ord(a) of an element a of a group (G, ◦) is the smallest positive integer k such that
+        a^(k) = a ◦ a ◦ . . . ◦ a = 1,
+                ------K times----
+        where 1 is the identity element of G.
+```
+```
+    Cyclic Group
+    A group G which contains an element α with maximum order ord( α ) = |G| is said to be cyclic. Elements with maximum order are called primitive elements or  generators.
+```
+```
+    Property of a Finite group
+    Let G be a finite group. Then for every a ∈ G it holds that:
+        1. a^|G| = 1
+        2. ord(a) divides |G|
+    
+    Property of a cyclic group
+    Let G be a finite cyclic group. Then it holds that
+        1. The number of primitive elements of G is Φ (|G|).
+        2. If |G| is prime, then all elements a  != 1 ∈ G are primitive.
+```
+### Diffie–Hellman key exchange
+
+```
+        ---------                       -----------------                            ---------
+        | Alice |                       | Public Domain |                            | Bob   |
+        ---------                       -----------------                            ---------
+        a = KprA                        α - generator                                 b = kprB
+           |                            p - prime number                                  |
+           |                                                                              |
+           |                                                                              |
+        A = α^(a) mod p                                                              B = α^(b) mod p
+           |                                                                              |
+           |                                                                              |
+           |                                   A                                          |
+           |----------------------------------------------------------------------------->|
+           |                                   B                                          |
+           |<-----------------------------------------------------------------------------|
+           |                                                                              |
+        Kab = B^(a) mod p                                                           Kab = A^(b) mod p
+        => Kab = α^(ab) mod p                                                       => Kab = α^(ab) mod p
+
+```
