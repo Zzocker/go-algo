@@ -35,6 +35,7 @@ Implantation of various algorithms and data-structure in golang for educational 
       - [DES](cryptography/des/fFunction.go)
    - Modern
       - [RSA](cryptography/rsa/rsa.go)
+      - [Diffie-Hellman Key Exchange](cryptography/dhk/diffieHellmanKeyExchange.go)
       - [Notes](cryptography/NOTES.md)
 
 ## Resources
