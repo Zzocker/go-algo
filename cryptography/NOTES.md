@@ -13,6 +13,8 @@
 - [Euler's Phi Function](Euler's-Phi-Function)
 - [Fermat’s Little Theorem](#Fermat’s-Little-Theorem)
 - [Euler’s Theorem](#Euler’s-Theorem)
+- [Discrete Logarithm Problem](#Discrete-Logarithm-Problem)
+- [The Generalized Discrete Logarithm Problem](#The-Generalized-Discrete-Logarithm-Problem)
 
 ### Euclidean Algorithm
 
@@ -91,7 +93,24 @@ It is easy to compute phi(m) if prime factorization of m is known, and difficult
     Let a and m be integers with gcd(a, m) = 1, then:
         => a ^(Φ(m)) ≡ 1 ( mod m).
 ```
-
+### Discrete Logarithm Problem
+```
+    Discrete Logarithm Problem (DLP) in Zp
+    Given is the finite cyclic group Zp of order p − 1 and a primitive element 
+    α ∈ Zp and another element β ∈ Zp . The DLP is the problem
+    of determining the integer 1 ≤ x ≤ p − 1 such that:
+        α^x ≡ β mod p
+```
+### The Generalized Discrete Logarithm Problem
+```
+    Generalized Discrete Logarithm Problem
+    Given is a finite cyclic group G with the group operation **o** and
+    cardinality n. We consider a primitive element α ∈ G and another
+    element β ∈ G. The discrete logarithm problem is finding the 
+    integer x, where 1 ≤ x ≤ n, such that:
+            β = α o α o . . . o α 
+                 ----x times---
+```
 ### Introduction To Public-Key Cryptography
 
 Basic Idea behind PKC, Let say Alice wants to send a message **x** to Bob securely over an unsecured channel.
