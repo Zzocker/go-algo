@@ -148,7 +148,7 @@ Unlike in symmetric key cryptography (DES,AES) encryption and decryption is done
 
 ### 3 Type of PKC
 1. [RSA](#RSA)
-
+2. [ElGamal encryption](#ElGamal-encryption)
 ### RSA
 RSA (Rivest–Shamir–Adleman) algorithm can divided into two part
 #### 1. [Key Generation](#RSA-Key-Generation)
@@ -177,6 +177,40 @@ Now, kPub = (e,n) and kPrv = d
 ```
 [Implementation](./rsa/rsa.go)
 
+### ElGamal encryption
+A extension of Diffie-Hellman Key exchange use for encryption
+```
+        ---------                                                                     ---------
+        | Alice |                                                                     | Bob   |
+        ---------                                                                     ---------
+           |                                                         1. choose a cyclic group G(p) and generator α
+           |                                                         2. choose private key d from {2,3..p-2}
+           |                                                         3. compute public key B = α ^ (d) mod p
+           |                                                                              |
+           |                                                                              |
+           |                                                                              |
+           |                  4. Bob sends (α , B , p)                                    |
+           |<-----------------------------------------------------------------------------|
+           |                                   B                                          |
+           |                                                                              |
+    5. choose i from {2,3... p-2}                                                         |                                   
+    6. compute Ke = α ^ (i) mod p                                                         |
+    7. Compute Masking Key Km                                                             |
+        Km = B ^ (i) mod p                                                                |
+    8. Compute Cipher text Y, from plaintext X                                            |
+        Y  = X . Km mod p                                                                 |
+           |                                                                              |
+           |                 9. Alice sends (Y , Ke )                                     |
+           |----------------------------------------------------------------------------->|
+           |                                                                              |
+           |                                                                  9. Compute Masking Key
+           |                                                                        Km = Ke ^ (d) mod p
+           |                                                                  10. Decrypt
+           |                                                                        X = Y . Km^(-1) mod p
+
+        
+
+```
 ### Math
 - [Fast Modular Exponential Computation](#Fast-Modular-Exponential-Computation)
 - [Prime Number Test Using Fermat’s Little Theorem](#Prime-Number-Test-Using-Fermat’s-Little-Theorem)
