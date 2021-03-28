@@ -149,6 +149,7 @@ Unlike in symmetric key cryptography (DES,AES) encryption and decryption is done
 ### 3 Type of PKC
 1. [RSA](#RSA)
 2. [ElGamal encryption](#ElGamal-encryption)
+3. [Elliptic Curves Cryptography](#Elliptic-Curves-Cryptography)
 ### RSA
 RSA (Rivest–Shamir–Adleman) algorithm can divided into two part
 #### 1. [Key Generation](#RSA-Key-Generation)
@@ -211,6 +212,41 @@ A extension of Diffie-Hellman Key exchange use for encryption
         
 
 ```
+### Elliptic Curves Cryptography
+Its based on general logarithmic problem, cyclic group in case ECC is a group with points as element(x,y) and addition as operation 
+```
+    The elliptic curve over Zp , p > 3, is the set of all pairs (x, y) ∈ Z p,which fulfill
+            y^2 ≡ (x^3 + a*x + b)mod p
+            together with an imaginary point of infinity O, where
+                            a, b ∈ Z Zp
+            and the condition 4a^3 + 27b^2 != 0 mod p.
+```
+Plot of the polynomial **y^2 ≡ (x^3 + a*x + b)**, symmetrical about x-axis
+
+![Curve](https://avinetworks.com/wp-content/uploads/2020/02/elliptic-curve-cryptography-diagram.png)
+
+#### Group Operation on Elliptic curve
+- Point Addition P + Q : This is the case where we compute R = P + Q and P !=
+Q. The construction works as follows: Draw a line through P and Q and obtain a
+third point of intersection between the elliptic curve and the line. Mirror this third
+intersection point along the x-axis. This mirrored point is, by definition, the point R.
+
+- Point Doubling P + P : This is the case where we compute P + Q but P = Q. Hence,
+we can write R = P + P = 2P. We need a slightly different construction here. We draw the tangent line through P and obtain a second point of intersection between
+this line and the elliptic curve. We mirror the point of the second intersection along
+the x-axis. This mirrored point is the result R of the doubling
+
+Algebraically
+``` 
+        P(x1,y1) , Q(x2,y2) and R(x3,y3)
+        x3 = s^2 − x1 − x2 mod p
+        y3 = s(x1 − x3) − y1 mod p
+        where
+            s :
+                - (y2-y1)*(x2 - x1)^(-1) mod p if P!=Q
+                - (3(x1^2) + a)*(2y1^(-1)) mod p if P==Q
+```
+Neutral/Identity Element in the group is **infinity** , it is defined  
 ### Math
 - [Fast Modular Exponential Computation](#Fast-Modular-Exponential-Computation)
 - [Prime Number Test Using Fermat’s Little Theorem](#Prime-Number-Test-Using-Fermat’s-Little-Theorem)
