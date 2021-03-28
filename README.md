@@ -37,7 +37,7 @@ Implantation of various algorithms and data-structure in golang for educational 
       - [RSA](cryptography/rsa/rsa.go)
       - [Diffie-Hellman Key Exchange](cryptography/dhk/diffieHellmanKeyExchange.go)
       - [Notes](cryptography/NOTES.md)
-
+## [Practice](https://github.com/Zzocker/go-algo-practice)
 ## Resources
 - Cryptography
    - [Introduction to Cryptography by Christof Paar](https://www.youtube.com/channel/UC1usFRN4LCMcfIV7UjHNuQg/videos)
